@@ -15,11 +15,12 @@ Principal::Principal(QWidget *parent)
     mImagen = new QImage(this->size(),QImage::Format_ARGB32_Premultiplied);
     // Establecemos el color de la imagen en blanco
     // (Podemos modificar al color que querramos usar como lienzo)
-    mImagen->fill(Qt::red);
+    mImagen->fill(Qt::white);
     // Instanciar el Painter a partir de la imagen
     mPainter = new QPainter(mImagen);
     mPainter->setRenderHint(QPainter::Antialiasing);
-    // Inicializar otras variables
+    // Inicialisamos variables como el color del pincel
+    // El ancho y el numero de l
     mPuedeDibujar = false;
     mColor = Qt::black;
     mAncho = 5;

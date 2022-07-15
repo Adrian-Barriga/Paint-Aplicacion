@@ -24,6 +24,7 @@ public:
     Principal(QWidget *parent = nullptr);
     ~Principal();
 
+//Establecesmo el QMouseEvent el cual nos permite dibujar las diversas figuras mientras se arrastra el mouse
 protected:
     void paintEvent(QPaintEvent *event) override;
     void mousePressEvent(QMouseEvent *event) override;
@@ -52,16 +53,16 @@ private slots:
 
 private:
     Ui::Principal *ui;
-    QImage *mImagen;        // Imagen sobre la que se va a dibujar
-    QPainter *mPainter;     // Painter de la imagen
-    QPoint mInicial;        // Punto incial para dibujar la línea
-    QPoint mFinal;          // Punto final para dibujar la líne
+    QImage *mImagen;        // Establecemos una imagen en blanco sobre la cual empezar a sibujar
+    QPainter *mPainter;     // Establecemos el objeto painter
+    QPoint mInicial;        // Eventos para dibujar el punto incial de una linea
+    QPoint mFinal;          // Eventos para dibujar el punto final de una linea
     QPoint mTempInic;
     QPoint mtempFinal;
     bool mPuedeDibujar;     // Determina si debe o no dibujar
-    int mAncho;             // Define el ancho del pincel
-    QColor mColor;          // Define el color del pincel
-    int mNumLineas;         // Cuenta el número de líneas
+    int mAncho;             // Declaramos el ancho del pincel
+    QColor mColor;          // Definimos el color del pincel
+    int mNumLineas;         // Variable con el número de lineas
     bool mPuedel;
 };
 #endif // PAINT_H
